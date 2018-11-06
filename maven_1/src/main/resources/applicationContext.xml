@@ -80,6 +80,56 @@
 
     <!--service配置文件结束-->
 
+
+
+
+
+
+
+<!--  &lt;!&ndash;在main文件夹下的resources包的下面创建applicationContext.xml&ndash;&gt;
+    &lt;!&ndash;首先整合mybatis,创建连接池对象&ndash;&gt;
+    <bean id="" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql:///maven"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="600427"></property>
+
+    </bean>
+    &lt;!&ndash;创建sqlsessionFactory&ndash;&gt;
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"></property>
+    <property name="typeAliasesPackage" value="com.itheima.domain"></property>
+</bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.itheima.dao"></property>
+    </bean>
+
+   <context:component-scan base-package="com.itheima.service"></context:component-scan>
+    <bean id="" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+<tx:advice id="advice">
+    <tx:attributes>
+        <tx:method name="save*" propagation="REQUIRED"/>
+    </tx:attributes>
+</tx:advice>
+    <aop:config>
+        <aop:advisor advice-ref="advice" pointcut="execution(* com.itheima.service.impl.*.*(..))"></aop:advisor>
+    </aop:config>-->
+
+
+    <!--扫面接口-->
+    <!--创建事务-->
+    <!--创建通知(通知包括切面和切入点)-->
+
+
+
+
+
+
+
+
 </beans>
 
 
