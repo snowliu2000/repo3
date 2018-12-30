@@ -574,7 +574,7 @@
       <workItem from="1545830143725" duration="1143000" />
       <workItem from="1545972720765" duration="1043000" />
       <workItem from="1546067223566" duration="5650000" />
-      <workItem from="1546141271636" duration="4772000" />
+      <workItem from="1546141271636" duration="5362000" />
     </task>
     <task id="LOCAL-00001" summary="把本地添加git repository">
       <created>1546151201079</created>
@@ -605,7 +605,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27253000" />
+    <option name="totallyTimeSpent" value="27843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
